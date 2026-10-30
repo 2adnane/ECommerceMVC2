@@ -1,0 +1,163 @@
+:root {
+    --ink: #172033;
+    --muted: #687386;
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+    --surface: #ffffff;
+    --background: #f4f6fb;
+    --border: #e3e8f1;
+    --danger: #c2413b;
+    --shadow: 0 12px 32px rgba(24, 39, 75, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 6%;
+    background: var(--background);
+    color: var(--ink);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    margin: 0 0 24px;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    letter-spacing: -1px;
+}
+
+p {
+    color: var(--muted);
+}
+
+a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+body > p {
+    display: inline-block;
+    margin: 0 12px 22px 0;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+th,
+td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background: #eef0ff;
+    color: #30366f;
+    font-size: 0.9rem;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+tbody tr:hover {
+    background: #fafaff;
+}
+
+form {
+    margin: 0;
+}
+
+input {
+    min-height: 42px;
+    padding: 8px 11px;
+    border: 1px solid #cbd3e1;
+    border-radius: 8px;
+    font: inherit;
+}
+
+input:focus {
+    outline: 3px solid rgba(79, 70, 229, 0.15);
+    border-color: var(--primary);
+}
+
+button {
+    min-height: 42px;
+    padding: 9px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+form input[type="number"] {
+    width: 76px;
+}
+
+form button {
+    margin-left: 6px;
+}
+
+label {
+    display: block;
+    margin: 14px 0;
+    color: var(--ink);
+    font-weight: 600;
+}
+
+label input {
+    display: block;
+    width: min(100%, 420px);
+    margin-top: 6px;
+    background: white;
+}
+
+body > form {
+    max-width: 520px;
+    padding: 26px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 24px 4%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding: 11px;
+    }
+}
